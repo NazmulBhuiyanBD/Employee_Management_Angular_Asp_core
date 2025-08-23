@@ -1,0 +1,32 @@
+<div class="d-flex">
+  <!-- Sidebar -->
+  <div class="sidebar text-white p-3 d-flex flex-column justify-content-between" style="width:250px; height:100vh;">
+    <div class="slidebarHeader">
+          <h2 class="mt-4 text-center">Dashboard</h2>
+    <a class="d-block mt-3 text-white text-decoration-none" routerLink="dashboard">
+      <i class="bi bi-speedometer2"></i> Dashboard
+    </a>
+    <a class="d-block mt-4 text-white text-decoration-none" routerLink="employee">
+      <i class="bi bi-people"></i> Employee
+    </a>
+    <a class="d-block mt-4 text-white text-decoration-none" routerLink="leaves">
+      <i class="bi bi-calendar-check"></i> Leave Management
+    </a>
+    <a class="d-block mt-4 text-white text-decoration-none" href="#">
+      <i class="bi bi-gear"></i> Settings
+    </a>
+    </div>
+    <div class="slidebarBottom">
+      <button class="btn btn-danger w-100" (click)="logout()">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </button>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-4 flex-grow-1">
+    <p>layout works!</p>
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

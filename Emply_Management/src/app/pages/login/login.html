@@ -1,0 +1,19 @@
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="login-container">
+      <h2 class="login-title">Login</h2>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="emailId" [(ngModel)]="loginObj.emailId" id="email" placeholder="Enter email" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" [(ngModel)]="loginObj.password"  id="password" placeholder="Enter password" required>
+        </div>
+        <button type="submit"(click)="onLogin()" class="btn btn-primary btn-login">Login</button>
+      </form>
+      <p class="mt-3 text-center">
+        Don't have an account? <a href="#">Sign up</a>
+      </p>
+    </div>
+  </div>

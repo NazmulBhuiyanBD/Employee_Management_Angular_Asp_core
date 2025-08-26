@@ -1,7 +1,32 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee\\Employee_Web_Api\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|c:\\users\\sayem\\onedrive\\desktop\\employee_management_angular_asp_core\\employee_web_api\\models\\leave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|solutionrelative:models\\leave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|c:\\users\\sayem\\onedrive\\desktop\\employee_management_angular_asp_core\\employee_web_api\\models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|solutionrelative:models\\position.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|c:\\users\\sayem\\onedrive\\desktop\\employee_management_angular_asp_core\\employee_web_api\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|c:\\users\\sayem\\onedrive\\desktop\\employee_management_angular_asp_core\\employee_web_api\\models\\appdb\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|solutionrelative:models\\appdb\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|c:\\users\\sayem\\onedrive\\desktop\\employee_management_angular_asp_core\\employee_web_api\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|c:\\users\\sayem\\onedrive\\desktop\\employee_management_angular_asp_core\\employee_web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE47B488-2776-4809-9E89-6634B20C5EE8}|Employee_Web_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +34,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Leave.cs",
+              "DocumentMoniker": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Leave.cs",
+              "RelativeDocumentMoniker": "Models\\Leave.cs",
+              "ToolTip": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Leave.cs",
+              "RelativeToolTip": "Models\\Leave.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T18:55:54.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Position.cs",
+              "DocumentMoniker": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Position.cs",
+              "RelativeDocumentMoniker": "Models\\Position.cs",
+              "ToolTip": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Position.cs",
+              "RelativeToolTip": "Models\\Position.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T18:51:42.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Models\\Department.cs",
+              "ToolTip": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Department.cs",
+              "RelativeToolTip": "Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T18:49:59.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\AppDb\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\AppDb\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\AppDb\\AppDbContext.cs",
+              "RelativeToolTip": "Models\\AppDb\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T18:41:05.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T18:23:50.404Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -18,6 +108,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\sayem\\OneDrive\\Desktop\\Employee_Management_Angular_Asp_core\\Employee_Web_Api\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA9wBcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T18:19:12.612Z",
+              "EditorCaption": ""
             }
           ]
         }

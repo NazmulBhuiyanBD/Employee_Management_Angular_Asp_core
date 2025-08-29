@@ -1,4 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Employee_Web_Api.Models.AppDb;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.OpenApi;
+using Microsoft.EntityFrameworkCore;
 
 namespace Employee_Web_Api.Models
 {
@@ -7,10 +11,9 @@ namespace Employee_Web_Api.Models
         [Key]
         public int DepartmentId { get; set; }
 
+        [MinLength(5)]
         public string DepartmentName { get; set; }
 
-        public string Location { get; set; }
-
-        public DateTime CreatedDate { get; set; }
     }
+
 }

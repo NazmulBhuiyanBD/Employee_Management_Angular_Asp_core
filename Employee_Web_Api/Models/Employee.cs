@@ -9,21 +9,22 @@ namespace Employee_Web_Api.Models
         [Key]
         public int EmployeeId { get; set; }
 
+        [Required, MaxLength(50)]
         public string Name { get; set; }
 
-
+        [Required, MaxLength(50)]
         public string Email { get; set; }
+
+        [Required, MaxLength(15)]
         public string Phone { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Gender { get; set; }
         public string Address { get; set; }
         public double Salary { get; set; }
 
-        [ForeignKey("Department")]
         public int DepartmentId { get; set; }
-        [ForeignKey("Position")]
-        public int PositionId { get; set; }
-
+        [ForeignKey("DepartmentId")]
+        public Department Department { get; set; }
 
     }
 }

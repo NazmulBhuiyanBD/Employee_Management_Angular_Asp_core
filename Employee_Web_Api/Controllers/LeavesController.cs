@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Employee_Web_Api.Models;
 using Employee_Web_Api.Models.AppDb;
+using Employee_Web_Api.ModelDTO;
 
 namespace Employee_Web_Api.Controllers
 {
@@ -21,16 +22,15 @@ namespace Employee_Web_Api.Controllers
             _context = context;
         }
 
-        // GET: api/Leaves
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Leave>>> GetLeaves()
+        public async Task<IActionResult> GetLeaves()
         {
-            return await _context.Leaves.ToListAsync();
+            var leaves = await _context.Leaves.ToListAsync();
+            return Ok(leaves);
         }
 
-        // GET: api/Leaves/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Leave>> GetLeave(int id)
+        public async Task<IActionResult> GetLeave(int id)
         {
             var leave = await _context.Leaves.FindAsync(id);
 
@@ -39,52 +39,54 @@ namespace Employee_Web_Api.Controllers
                 return NotFound();
             }
 
-            return leave;
+            return Ok(leave);
         }
 
-        // PUT: api/Leaves/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutLeave(int id, Leave leave)
+        public async Task<IActionResult> PutLeave(int id, LeaveDto leave)
         {
-            if (id != leave.LeaveId)
+            var empLeave = await _context.Leaves.FindAsync(id);
+            if (empLeave ==null)
             {
-                return BadRequest();
+                return NotFound();
             }
-
-            _context.Entry(leave).State = EntityState.Modified;
-
-            try
+            var empId = await _context.Employees.FirstOrDefaultAsync(u=>u.EmployeeId==leave.EmployeeId);
+            if(empId==null)
             {
-                await _context.SaveChangesAsync();
+                return NotFound("Employee Not Found");
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!LeaveExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
-        // POST: api/Leaves
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Leave>> PostLeave(Leave leave)
-        {
-            _context.Leaves.Add(leave);
+            empLeave.EmployeeId = leave.EmployeeId;
+            empLeave.StartDate = leave.StartDate;
+            empLeave.LeaveType = leave.LeaveType;
+            empLeave.Status = leave.Status;
+            empLeave.EndDate = leave.EndDate;
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetLeave", new { id = leave.LeaveId }, leave);
+            return Ok(empLeave);
         }
 
-        // DELETE: api/Leaves/5
+        [HttpPost]
+        public async Task<IActionResult> PostLeave(LeaveDto leave)
+        {
+            var empId = await _context.Employees.FirstOrDefaultAsync(u => u.EmployeeId == leave.EmployeeId);
+            if(empId==null)
+            {
+                return NotFound("employee Not found");
+            }
+            var empLeave = new Leave
+            {
+                EmployeeId = leave.EmployeeId,
+                StartDate = DateOnly.FromDateTime(DateTime.Now),
+                EndDate=leave.EndDate,
+                LeaveType=leave.LeaveType,
+                Status=leave.Status
+
+            };
+            _context.Leaves.Add(empLeave);
+            await _context.SaveChangesAsync();
+            return Ok(empLeave);
+        }
+
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLeave(int id)
         {
@@ -100,9 +102,5 @@ namespace Employee_Web_Api.Controllers
             return NoContent();
         }
 
-        private bool LeaveExists(int id)
-        {
-            return _context.Leaves.Any(e => e.LeaveId == id);
-        }
     }
 }

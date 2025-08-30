@@ -3,7 +3,6 @@ using Employee_Web_Api.Models;
 using Employee_Web_Api.Models.AppDb;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Microsoft.EntityFrameworkCore;
 
 namespace Employee_Web_Api.Controllers

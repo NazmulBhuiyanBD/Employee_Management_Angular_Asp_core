@@ -7,17 +7,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Employee_Web_Api.Models.Department, Employee_Web_Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.DepartmentsController",
@@ -29,21 +19,11 @@
     "Parameters": [
       {
         "Name": "department",
-        "Type": "Employee_Web_Api.Models.Department",
+        "Type": "Employee_Web_Api.ModelDTO.DepDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Employee_Web_Api.Models.Department",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.DepartmentsController",
@@ -59,17 +39,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Employee_Web_Api.Models.Department",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.DepartmentsController",
@@ -86,7 +56,7 @@
       },
       {
         "Name": "department",
-        "Type": "Employee_Web_Api.Models.Department",
+        "Type": "Employee_Web_Api.ModelDTO.DepDto",
         "IsRequired": true
       }
     ],
@@ -116,21 +86,11 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Employee_Web_Api.Models.Employee, Employee_Web_Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.EmployeesController",
-    "Method": "PostEmployee",
+    "Method": "CreateEmployee",
     "RelativePath": "api/Employees",
     "HttpMethod": "POST",
     "IsController": true,
@@ -138,21 +98,11 @@
     "Parameters": [
       {
         "Name": "employee",
-        "Type": "Employee_Web_Api.Models.Employee",
+        "Type": "Employee_Web_Api.ModelDTO.EmployeeDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Employee_Web_Api.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.EmployeesController",
@@ -168,21 +118,11 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Employee_Web_Api.Models.Employee",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.EmployeesController",
-    "Method": "PutEmployee",
+    "Method": "UpdateEmployee",
     "RelativePath": "api/Employees/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -195,7 +135,7 @@
       },
       {
         "Name": "employee",
-        "Type": "Employee_Web_Api.Models.Employee",
+        "Type": "Employee_Web_Api.ModelDTO.EmployeeDto",
         "IsRequired": true
       }
     ],
@@ -225,17 +165,7 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Employee_Web_Api.Models.Leave, Employee_Web_Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.LeavesController",
@@ -247,21 +177,11 @@
     "Parameters": [
       {
         "Name": "leave",
-        "Type": "Employee_Web_Api.Models.Leave",
+        "Type": "Employee_Web_Api.ModelDTO.LeaveDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Employee_Web_Api.Models.Leave",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.LeavesController",
@@ -277,17 +197,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "Employee_Web_Api.Models.Leave",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Employee_Web_Api.Controllers.LeavesController",
@@ -304,7 +214,7 @@
       },
       {
         "Name": "leave",
-        "Type": "Employee_Web_Api.Models.Leave",
+        "Type": "Employee_Web_Api.ModelDTO.LeaveDto",
         "IsRequired": true
       }
     ],

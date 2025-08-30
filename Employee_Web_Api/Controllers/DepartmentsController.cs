@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Employee_Web_Api.Models;
 using Employee_Web_Api.Models.AppDb;
+using Employee_Web_Api.ModelDTO;
 
 namespace Employee_Web_Api.Controllers
 {
@@ -21,16 +22,15 @@ namespace Employee_Web_Api.Controllers
             _context = context;
         }
 
-        // GET: api/Departments
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Department>>> GetDepartments()
+        public async Task<IActionResult> GetDepartments()
         {
-            return await _context.Departments.ToListAsync();
+            var dept = await _context.Departments.ToListAsync();
+            return Ok(dept);
         }
 
-        // GET: api/Departments/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Department>> GetDepartment(int id)
+        public async Task<IActionResult> GetDepartment(int id)
         {
             var department = await _context.Departments.FindAsync(id);
 
@@ -39,70 +39,55 @@ namespace Employee_Web_Api.Controllers
                 return NotFound();
             }
 
-            return department;
+            return Ok(department);
         }
 
-        // PUT: api/Departments/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDepartment(int id, Department department)
+        public async Task<IActionResult> PutDepartment(int id, DepDto department)
         {
-            if (id != department.DepartmentId)
-            {
-                return BadRequest();
-            }
+            var dept = await _context.Departments.FindAsync(id);
 
-            _context.Entry(department).State = EntityState.Modified;
-
-            try
+            if (dept ==null)
             {
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DepartmentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            dept.DepartmentName = department.DepartmentName;
+            await _context.SaveChangesAsync();
+            return Ok(dept);
         }
 
-        // POST: api/Departments
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
         [HttpPost]
-        public async Task<ActionResult<Department>> PostDepartment(Department department)
+        public async Task<IActionResult> PostDepartment(DepDto department)
         {
-            _context.Departments.Add(department);
+            var dept = await _context.Departments.FirstOrDefaultAsync(u=>u.DepartmentName==department.DepartmentName);
+            if(dept!=null)
+            {
+                return BadRequest("department already exits");
+            }
+            var newDept = new Department
+            {
+                DepartmentName = department.DepartmentName,
+            };
+            await _context.Departments.AddAsync(newDept);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDepartment", new { id = department.DepartmentId }, department);
+            return Ok(newDept);
         }
 
-        // DELETE: api/Departments/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDepartment(int id)
         {
-            var department = await _context.Departments.FindAsync(id);
-            if (department == null)
+            var dept = await _context.Departments.FindAsync(id);
+            if (dept == null)
             {
                 return NotFound();
             }
 
-            _context.Departments.Remove(department);
+            _context.Departments.Remove(dept);
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool DepartmentExists(int id)
-        {
-            return _context.Departments.Any(e => e.DepartmentId == id);
         }
     }
 }

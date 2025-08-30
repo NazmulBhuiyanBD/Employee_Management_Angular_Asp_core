@@ -21,10 +21,10 @@ namespace Employee_Web_Api.Models
         public string LeaveType { get; set; }
         //(Sick, Casual, Paid, Unpaid)
 
-        public DateTime StartDate { get; set; }
+        public DateOnly StartDate { get; set; }
 
         [Required]
-        public DateTime EndDate { get; set; }
+        public DateOnly EndDate { get; set; }
 
         [Required]
         public string Status { get; set; }
